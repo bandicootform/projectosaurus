@@ -22,7 +22,7 @@ export default function Navigation() {
           <div className="flex items-center">
             <Link href="/">
               <img 
-                src="/logo.png" 
+                src="/images/logo.png" 
                 alt="Logo" 
                 className="h-8 w-auto" 
                 />
