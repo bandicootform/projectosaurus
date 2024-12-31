@@ -4,8 +4,8 @@ import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 
 const poppins = Poppins({
-  weight: ['400', '600']
-  subsets: ['latin'],
+  weight: ['400', '600'],
+  subsets: ['latin']
 })
 
 export const metadata = {
