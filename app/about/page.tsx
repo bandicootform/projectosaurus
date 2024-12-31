@@ -20,7 +20,7 @@ export default function About() {
         transition={{ delay: 0.5, duration: 0.8 }}
       >
         <p className="mb-4">
-          Rex's thoughts is to turn a basic ideas into visual expressions. It's all about experimenting with the simplest concepts, while discovering the potential of type and design.
+          Rex&apos;s thoughts is to turn a basic ideas into visual expressions. It&apos;s all about experimenting with the simplest concepts, while discovering the potential of type and design.
         </p>
         <p className="mb-4">
           The focus is on the foundational steps, learning, creating, and exploring the beauty in simplicity. Each work is a chance to dive deeper into the design process, share inspiration, and grow as a designer.
