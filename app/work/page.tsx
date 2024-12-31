@@ -13,6 +13,7 @@ const projects = [
   { id: 6, image: '/images/project6.png' },
   { id: 7, image: '/images/project7.png' },
   { id: 8, image: '/images/project8.png' },
+  { id: 9, image: '/images/project9.png' },
 ]
 
 export default function Work() {
@@ -53,6 +54,7 @@ function RevealImage({ image, index }: { image: string; index: number }) {
         width={1600}
         height={1200}
         className="w-full h-auto object-cover"
+        loading= "lazy"
       />
     </motion.div>
   )
