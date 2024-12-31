@@ -44,8 +44,8 @@ function RevealImage({ image, index }: { image: string; index: number }) {
       ref={ref}
       className="bg-gray-800 rounded-lg overflow-hidden"
       initial={{ opacity: 0, scale: 0.9, y: 50 }}
-      animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}}
-      transition={{ duration: 0.8, delay: index * 1.5 }}
+      animate={isInView ? { opacity: 1, y: 0 } :{}}
+      transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}
     >
       <Image
         src={image}
@@ -53,6 +53,7 @@ function RevealImage({ image, index }: { image: string; index: number }) {
         width={1600}
         height={1200}
         className="w-full h-auto object-cover"
+        priority
       />
     </motion.div>
   )
