@@ -11,6 +11,9 @@ const poppins = Poppins({
 export const metadata = {
   title: 'Rex - The Breathtaker',
   description: 'It&apos;s not just about pretty fonts, it&apos;s about telling stories with type and design. Dive in as we grow a lush garden of creative communication.',
+  icons: {
+    icon: '/favicon.ico'
+  },
 }
 
 export default function RootLayout({
