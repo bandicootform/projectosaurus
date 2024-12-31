@@ -45,10 +45,10 @@ export default function Home() {
           transition={{ delay: 1.5, duration: 0.8 }}
       >
         <Link href="https://github.com/bamdicootform" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faGithub} size="2x" className="text-white hover:text-gray-400 transition-colors duration-300" />
+          <FontAwesomeIcon icon={faGithub} style={{ fontSize: '1.5rem' }} className="text-white hover:text-gray-400 transition-colors duration-300" />
           </Link>
          <Link href="https://instagram.com/bandicootform" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faInstagram} size="2x" className="text-white hover:text-gray-400 transition-colors duration-300" />
+          <FontAwesomeIcon icon={faInstagram} style={{ fontSize: '1.5rem' }} className="text-white hover:text-gray-400 transition-colors duration-300" />
             </Link>
           </motion.div>
         </div>
