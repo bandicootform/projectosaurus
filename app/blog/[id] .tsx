@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 
 const posts = [
