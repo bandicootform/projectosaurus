@@ -1,7 +1,8 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import Image from 'next/image'
+import { useRef } from 'react'
 
 const projects = [
   { id: 1, image: '/images/project1.png' },
@@ -27,24 +28,32 @@ export default function Work() {
       </motion.h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {projects.map((project, index) => (
-          <motion.div
-            key={project.id}
-            className="bg-gray-800 rounded-lg overflow-hidden"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: index * 0.2 }}
-          >
-            <Image
-              src={project.image}
-              alt={`Project ${project.id}`}
-              width={1600}
-              height={1200}
-              className="w-full h-auto object-cover"
-            />
-          </motion.div>
+          <RevealImage key={project.id} image={project.image} index={index} />
         ))}
       </div>
     </div>
   )
 }
 
+function RevealImage({ image, index }: { image: string; index: number }) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+
+  return (
+    <motion.div
+      ref={ref}
+      className="bg-gray-800 rounded-lg overflow-hidden"
+      initial={{ opacity: 0, scale: 0.9, y: 50 }}
+      animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, delay: index * 0.2 }}
+    >
+      <Image
+        src={image}
+        alt={`Project ${index + 1}`}
+        width={1600}
+        height={1200}
+        className="w-full h-auto object-cover"
+      />
+    </motion.div>
+  )
+}
