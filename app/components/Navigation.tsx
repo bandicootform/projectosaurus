@@ -21,7 +21,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/">
-              <image
+              <img
                 src="/images/logo.png" 
                 alt="Logo" 
                 className="h-16 w-auto" 
