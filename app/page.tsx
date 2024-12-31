@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 export default function Home() {
   return (
@@ -20,7 +22,7 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
       >
-        I don&apos;t do perfect, I do stories with type and design, while expanding the gorgeous garden of communication. Take a sbot!
+        I do stories with type and design, while expanding the gorgeous garden of communication.
       </motion.p>
       <motion.div
         className="flex flex-wrap justify-center gap-4"
@@ -35,7 +37,21 @@ export default function Home() {
           Get in Touch
         </Link>
       </motion.div>
-    </div>
-  )
-}
+
+      <motion.div
+          className="flex gap-6 mt-8"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.5, duration: 0.8 }}
+      >
+        <Link href="https://github.com/bamdicootform" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faGithub} size="2x" className="text-white hover:text-gray-400 transition-colors duration-300" />
+          </Link>
+         <Link href="https://instagram.com/bandicootform" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faInstagram} size="2x" className="text-white hover:text-gray-400 transition-colors duration-300" />
+            </Link>
+          </motion.div>
+        </div>
+         )
+      }
 
