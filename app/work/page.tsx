@@ -4,12 +4,14 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 const projects = [
-  { id: 1, image: '/placeholder.svg?height=1200&width=1600' },
-  { id: 2, image: '/placeholder.svg?height=1200&width=1600' },
-  { id: 3, image: '/placeholder.svg?height=1200&width=1600' },
-  { id: 4, image: '/placeholder.svg?height=1200&width=1600' },
-  { id: 5, image: '/placeholder.svg?height=1200&width=1600' },
-  { id: 6, image: '/placeholder.svg?height=1200&width=1600' },
+  { id: 1, image: '/images/project1.png' },
+  { id: 2, image: '/images/project2.png' },
+  { id: 3, image: '/images/project3.png' },
+  { id: 4, image: '/images/project4.png' },
+  { id: 5, image: '/images/project5.png' },
+  { id: 6, image: '/images/project6.png' },
+  { id: 7, image: '/images/project7.png' },
+  { id: 8, image: '/images/project8.png' },
 ]
 
 export default function Work() {

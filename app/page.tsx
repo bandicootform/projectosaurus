@@ -12,7 +12,7 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Welcome to Rex&apos;s Visual Chaos
+        Hi, I&apos;m Rex The Breathtaker
       </motion.h1>
       <motion.p
         className="text-xl md:text-2xl text-center mb-12 max-w-2xl"
@@ -20,7 +20,7 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
       >
-        Where&apos;s all not about perfection but about understanding how type and visuals can tell a story and expanding the gorgeus garden of communication.
+        I don&apos;t do perfect, I do stories with type and design, while expanding the gorgeous garden of communication. Take a sbot!
       </motion.p>
       <motion.div
         className="flex flex-wrap justify-center gap-4"
