@@ -1,9 +1,17 @@
 import './globals.css'
+import { Mulish } from 'next/font/google'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
-import Head from 'next/head';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import './lib/fontawesome';
+
+const mulish = Mulish({
+    subsets: ['latin'],
+    weight: ['400', '600', '700'],
+    display: 'swap',
+  })
 
 export const metadata = {
   title: 'Bandicoot Form',
@@ -20,10 +28,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" style={{ scrollBehavior: "smooth" }}>
-      <Head>
-        <link rel="stylesheet" 
-        href="https://fonts.cdnfonts.com/css/helvetica-neue-55" />
-        </Head>
       <body className="bg-black text-white" style={{fontFamily: 'Helvetica Neue, sans-serif'}}>
         <Navigation />
         <main>{children}</main>

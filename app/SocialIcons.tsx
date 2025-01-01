@@ -1,21 +1,31 @@
+// app/components/SocialIcons.tsx
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-const SocialIcons: React.FC = () => {
-  return (
-    <div className="social-icons">
-    <a href="https://www.github.com/bandicootform" target="_blank" rel="noopener noreferrer">
-     <FontAwesomeIcon icon={faGithub} size="2x" />
-      </a>
-    <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
-     <FontAwesomeIcon icon={faTwitter} size="2x" />
-      </a>
-    <a href="https://www.instagram.com/rexthebreathtaker" target="_blank" rel="noopener noreferrer">
-     <FontAwesomeIcon icon={faInstagram} size="2x" />
-    </a>
-     </div>
-         );
-         };
+const socialLinks = [
+  { name: 'github', url: 'https://www.github.com/rexthebreathtaker', icon: faGithub },
+    { name: 'twitter', url: 'https://twitter.com/yourprofile', icon: faTwitter },
+      { name: 'instagram', url: 'https://www.instagram.com/rexthebreathtaker', icon: faInstagram }
+      ];
 
-     export default SocialIcons;
+      const SocialIcons: React.FC = () => {
+      return (
+        <div className="social-icons">
+          {socialLinks.map((social) => (
+            <a
+             key={social.name}
+             href={social.url}
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label={social.name}
+             >
+            <FontAwesomeIcon icon={social.icon} size="2x" />
+            </a>
+            ))}
+        </div>
+        
+      );   
+    };
+
+           export default SocialIcons;
