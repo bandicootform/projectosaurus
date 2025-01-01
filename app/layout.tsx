@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" style={{ scrollBehavior: "smooth" }}>
-      <body className="bg-black text-white" style={{fontFamily: 'Helvetica Neue, sans-serif'}}>
+      <body className={`bg-black text-white ${mulish.className}`}>
         <Navigation />
         <main>{children}</main>
         <SpeedInsights />
