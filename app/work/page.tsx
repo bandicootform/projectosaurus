@@ -18,7 +18,7 @@ const projects = [
 
 export default function Work() {
   return (
-    <div className="min-h-screen p-4 pt-20">
+    <div className="min-h-screen p-4 pt-15">
       <motion.h1
         className="text-4xl md:text-6xl font-bold text-center my-8"
         initial={{ opacity: 0, y: -50 }}
