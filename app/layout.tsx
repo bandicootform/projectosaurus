@@ -12,7 +12,7 @@ const poppins = Poppins({
 
 export const metadata = {
   title: 'Bandicoot Form',
-  description: 'Bandicoot Form is an independent platform practice focused on design, creative sharing, and meant to be seen as much as to be read',
+  description: 'Bandicoot Form is a platform focused on exploring creativity and expanding the gorgeus garden of communication, a place to transform simple ideas into visual expressions and meant to be seen as much as to be read.',
   icons: {
     icon: '/images/favicon.png'
   },
