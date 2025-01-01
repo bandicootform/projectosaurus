@@ -20,10 +20,10 @@ export default function About() {
         transition={{ delay: 0.5, duration: 0.8 }}
       >
         <p className="mb-4">
-          My thoughts is to turn a basic ideas into visual expressions. It&apos;s all about experimenting with the simplest concepts, while discovering the potential of type and design.
+          Bandicoot Form is a platform dedicated to exploring the intersection of design and creativity. It serves as a space to transform basic ideas into visual expressions, while expanding the gorgeus garden of communication.
         </p>
         <p className="mb-4">
-          The focus is on the foundational steps, learning, creating, and exploring the beauty in simplicity. Each work is a chance to dive deeper into the design process, share inspiration, and grow as a designer.
+          The focus is on the foundational steps, learning, ceating, and having fun with it. Each work is a chance to dive deeper into the design process, share inspiration, and grow as a designer.
         </p> 
       </motion.div>
     </div>
