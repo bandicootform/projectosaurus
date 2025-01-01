@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center p-4">
       <motion.h1
-        className="text-5xl md:text-7xl font-bold text-center mb-8"
+        className="text-4xl md:text-6xl font-bold text-center mb-8"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
