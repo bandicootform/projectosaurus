@@ -50,8 +50,8 @@ function RevealImage({ image, index }: { image: string; index: number }) {
       <Image
         src={image}
         alt={`Project ${index + 1}`}
-        width={1600}
-        height={1200}
+        width={1200}
+        height={900}
         className="w-full h-auto object-cover"
       />
     </motion.div>
