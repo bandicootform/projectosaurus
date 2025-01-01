@@ -23,7 +23,7 @@ export default function About() {
           Bandicoot Form is a platform dedicated to explore the creativity, and meant to be seen as much as to be read. It serves as a space to transform basic ideas into visual expressions, while expanding the gorgeus garden of communication.
         </p>
         <p className="mb-4">
-          The focus is on the foundational steps, learning, creating, and having fun with it. Each work is a chance to dive deeper into the design process, share inspiration, and grow as a designer.
+          The focus is on the foundational steps, learning, creating, and having fun with it. Each work is a chance to dive deeper into the design process, share inspiration, and grow as whatever i want to be.
         </p> 
       </motion.div>
     </div>
