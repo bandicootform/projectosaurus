@@ -22,7 +22,7 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
       >
-        I do stories with type and design, while expanding the gorgeous garden of communication.
+        Expressive typeforms, meant to be seen as much as to be read.
       </motion.p>
       <motion.div
         className="flex flex-wrap justify-center gap-4"
