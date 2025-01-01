@@ -47,7 +47,7 @@ export default function Home() {
         <Link href="https://github.com/rexthebreathtaker" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faGithub} style={{ fontSize: '1.5rem' }} className="text-white hover:text-gray-400 transition-colors duration-300" />
         </Link>
-        <Link href="https://instagram.com/bandicootform" target="_blank" rel="noopener noreferrer">
+        <Link href="https://instagram.com/bandicoot.form" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faInstagram} style={{ fontSize: '1.5rem' }} className="text-white hover:text-gray-400 transition-colors duration-300" />
         </Link>
       </motion.div>
