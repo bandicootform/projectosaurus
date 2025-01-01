@@ -2,6 +2,7 @@ import './globals.css'
 import { Poppins } from 'next/font/google'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const poppins = Poppins({
   weight: ['400', '600'],
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className={`${poppins.className} bg-black text-white`}>
         <Navigation />
         <main>{children}</main>
+        <SpeedInsights />
         <Footer />
       </body>
     </html>
