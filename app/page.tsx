@@ -33,25 +33,24 @@ export default function Home() {
         <Link href="/work" className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition-colors duration-300">
           View My Work
         </Link>
-        <Link href="/contact" className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition-colors duration-300">
+        <Link href="/contact" className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition-colors duration-0.3">
           Get in Touch
         </Link>
       </motion.div>
 
       <motion.div
-          className="flex gap-6 mt-8"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5, duration: 0.8 }}
+        className="flex gap-6 mt-8"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.5, duration: 0.8 }}
       >
-        <Link href="https://github.com/bamdicootform" target="_blank" rel="noopener noreferrer">
+        <Link href="https://github.com/rexthebreathtaker" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faGithub} style={{ fontSize: '1.5rem' }} className="text-white hover:text-gray-400 transition-colors duration-300" />
-          </Link>
-         <Link href="https://instagram.com/bandicootform" target="_blank" rel="noopener noreferrer">
+        </Link>
+        <Link href="https://instagram.com/bandicootform" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faInstagram} style={{ fontSize: '1.5rem' }} className="text-white hover:text-gray-400 transition-colors duration-300" />
-            </Link>
-          </motion.div>
-        </div>
-         )
-      }
-
+        </Link>
+      </motion.div>
+    </div>
+  )
+}
