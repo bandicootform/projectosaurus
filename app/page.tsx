@@ -17,7 +17,7 @@ export default function Home() {
         It&apos;s Called Bandicoot Form
       </motion.h1>
       <motion.p
-        className="text-xl md:text-2xl text-center mb-12 max-w-2xl"
+        className="text-lg md:text-2xl text-center mb-12 max-w-2xl"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
