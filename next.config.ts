@@ -1,10 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images: {
-      formats: ["image/webp"],
-      domains: ["your-image-domain.com"]
-
+        images: {
+        formats: ["image/webp"],
+        domains: ["https://bandicootform.vercel.app/work"]
+        
    },
   };
 
