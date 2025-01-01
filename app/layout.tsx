@@ -1,5 +1,5 @@
 import './globals.css'
-import { Mulish } from 'next/font/google'
+import { Arimo } from 'next/font/google'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import { SpeedInsights } from "@vercel/speed-insights/next"
@@ -7,7 +7,7 @@ import { Analytics } from "@vercel/analytics/react"
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import '../lib/fontawesome';
 
-const mulish = Mulish({
+const arimo = Arimo({
     subsets: ['latin'],
     weight: ['400', '600', '700'],
     display: 'swap',
@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" style={{ scrollBehavior: "smooth" }}>
-      <body className={`bg-black text-white ${mulish.className}`}>
+      <body className={`bg-black text-white ${arimo.className}`}>
         <Navigation />
         <main>{children}</main>
         <SpeedInsights />

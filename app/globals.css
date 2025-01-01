@@ -10,7 +10,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  font-family: 'Mulish', san-serif;
+  font-family: 'Arimo', san-serif;
   background: linear-gradient(
       to bottom,
       transparent,
