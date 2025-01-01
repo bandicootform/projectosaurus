@@ -11,8 +11,8 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  title: 'Bandicoot Form - Independent Typographic Practice',
-  description: 'It&apos;s not just about pretty fonts, it&apos;s about telling stories with type and design. Dive in as we grow a lush garden of creative communication.',
+  title: 'Bandicoot Form',
+  description: 'Bandicoot Form is an independent platform practice focused on design, creativity, and the process in between',
   icons: {
     icon: '/images/favicon.png'
   },
