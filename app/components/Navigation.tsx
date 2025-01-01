@@ -24,7 +24,7 @@ export default function Navigation() {
               <img
                 src="/images/logo.png" 
                 alt="Logo" 
-                className="h-auto w-20" 
+                className="h-16 w-16" 
                 />
           </Link>
           </div>
