@@ -5,7 +5,7 @@ import Footer from './components/Footer'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import '.../lib/fontawesome';
+import '../lib/fontawesome';
 
 const mulish = Mulish({
     subsets: ['latin'],
