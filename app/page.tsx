@@ -14,7 +14,8 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Hi, it&apos;s Called Bandicoot Form
+        Hi, it&apos;s Called 
+        Bandicoot Form
       </motion.h1>
       <motion.p
         className="text-xl md:text-2xl text-center mb-12 max-w-2xl"
