@@ -18,7 +18,7 @@ const projects = [
 
 export default function Work() {
   return (
-    <div className="min-h-screen p-4">
+    <div className="min-h-screen p-4 pt-20">
       <motion.h1
         className="text-4xl md:text-6xl font-bold text-center my-8"
         initial={{ opacity: 0, y: -50 }}
@@ -53,7 +53,6 @@ function RevealImage({ image, index }: { image: string; index: number }) {
         width={1600}
         height={1200}
         className="w-full h-auto object-cover"
-        priority
       />
     </motion.div>
   )
