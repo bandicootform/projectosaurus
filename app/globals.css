@@ -10,6 +10,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  font-family: 'Helvetica Neue', san-serif;
   background: linear-gradient(
       to bottom,
       transparent,

@@ -1,15 +1,9 @@
 import './globals.css'
-import { Poppins } from 'next/font/google'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 import Head from 'next/head';
-
-const poppins = Poppins({
-  weight: ['400', '600'],
-  subsets: ['latin']
-})
 
 export const metadata = {
   title: 'Bandicoot Form',
@@ -30,7 +24,7 @@ export default function RootLayout({
         <link rel="stylesheet" 
         href="https://fonts.cdnfonts.com/css/helvetica-neue-55" />
         </Head>
-      <body className={`${poppins.className} bg-black text-white`}>
+      <body className="bg-black text-white" style={{fontFamily: 'Helvetica Neue, sans-serif'}}>
         <Navigation />
         <main>{children}</main>
         <SpeedInsights />
