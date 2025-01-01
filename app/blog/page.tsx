@@ -12,7 +12,7 @@ const posts = [
 
 export default function Blog() {
   return (
-    <div className="min-h-screen p-8 pt-16">
+    <div className="min-h-screen p-6 pt-16">
       <motion.h1
         className="text-4xl md:text-6xl font-bold text-center my-8"
         initial={{ opacity: 0, y: -50 }}
