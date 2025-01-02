@@ -31,12 +31,8 @@ export default function Blog() {
             transition={{ duration: 0.8, delay: index * 0.2 }}
           >
             <Link href={`/blog/${post.id}`} className="block">
-              <h2 className="text-2xl font-semibold mb-2 hover:text-blue-400 transition-colors duration-300">{post.title}</h2>
-              <p className="text-gray-400">{post.date}</p>
-            </Link>
-          </motion.div>
-        ))}
-      </div>
-    </div>
-  );
-}
+className="block">
+href={`/blog/${post.id}`} className="block">
+className="block">
+<Link href={`/blog/${post.id}`} className="block">
+className="blo
