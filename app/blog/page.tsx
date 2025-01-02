@@ -1,14 +1,14 @@
-'use client'
+'use client';
 
-import { motion } from 'framer-motion'
-import Link from 'next/link'
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const posts = [
-  { id: 1, title: 'The Future of Digital Art', date: '2023-05-15' },
-  { id: 2, title: 'Exploring Virtual Reality in Modern Museums', date: '2023-06-02' },
-  { id: 3, title: 'AI and Creativity: A New Frontier', date: '2023-06-20' },
-  { id: 4, title: 'The Impact of Technology on Contemporary Art', date: '2023-07-08' },
-]
+  { id: 1, title: 'Journey to Minimalist Design: Lessons Learned', date: '2025-01-01' },
+  { id: 2, title: 'My First Website with Next.js: A Beginner’s Experience', date: '2025-01-02' },
+  { id: 3, title: 'Typography Experiments: From Sketches to Digital', date: '2025-01-03' },
+  { id: 4, title: 'Challenges in Combining Design and Functionality', date: '2025-01-04' },
+];
 
 export default function Blog() {
   return (
@@ -38,6 +38,5 @@ export default function Blog() {
         ))}
       </div>
     </div>
-  )
+  );
 }
-
