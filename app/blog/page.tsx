@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { client } from '../sanity';
+import Link from 'next/link';
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
@@ -18,7 +19,11 @@ const Blog = () => {
       <ul>
         {posts.map((post) => (
           <li key={post._id}>
-            <h2>{post.title}</h2>
+            <h2>
+              <Link href={`/blog/${post._id}`}>
+                {post.title}
+              </Link>
+            </h2>
             <p>{post.excerpt}</p>
           </li>
         ))}
