@@ -2,8 +2,14 @@ import { useEffect, useState } from 'react';
 import { client } from '../sanity';
 import Link from 'next/link';
 
+interface Post {
+  _id: string;
+  title: string;
+  excerpt: string;
+}
+
 const Blog = () => {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
