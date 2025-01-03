@@ -1,38 +1,35 @@
-'use client';
-
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { client } from '../sanity';
 import Link from 'next/link';
 
-const posts = [
-  { id: 1, title: 'Journey to Minimalist Design: Lessons Learned', date: '2025-01-01' },
-  { id: 2, title: 'My First Website with Next.js: A Beginner’s Experience', date: '2025-01-02' },
-  { id: 3, title: 'Typography Experiments: From Sketches to Digital', date: '2025-01-03' },
-  { id: 4, title: 'Challenges in Combining Design and Functionality', date: '2025-01-04' },
-];
+const Blog = () => {
+  const [posts, setPosts] = useState([]);
 
-export default function Blog() {
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await client.fetch('*[_type == "post"]');
+      setPosts(data);
+    };
+    fetchData();
+  }, []);
+
   return (
-    <div className="min-h-screen p-6 pt-16">
-      <motion.h1
-        className="text-4xl md:text-6xl font-bold text-center my-8"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        Blog
-      </motion.h1>
-      <div className="max-w-3xl mx-auto">
-        {posts.map((post, index) => (
-          <motion.div
-            key={post.id}
-            className="mb-8"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: index * 0.2 }}
-          >
-            <Link href={`/blog/${post.id}`} className="block">
-className="block">
-href={`/blog/${post.id}`} className="block">
-className="block">
-<Link href={`/blog/${post.id}`} className="block">
-className="blo
+    <div>
+      <h1>Blog</h1>
+      <ul>
+        {posts.map((post) => (
+          <li key={post._id}>
+            <h2>
+              <Link href={`/blog/${post._id}`}>
+                {post.title}
+              </Link>
+            </h2>
+            <p>{post.excerpt}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default Blog;
