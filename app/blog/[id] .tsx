@@ -1,37 +1,69 @@
-import { useEffect, useState } from 'react';
-import { client } from '../../sanity'; 
-import { useRouter } from 'next/router';
+'use client';
 
-const PostDetail = () => {
-  const [post, setPost] = useState(null);
-  const { query } = useRouter(); 
-  const { id } = query;
+import { useEffect, useState } from 'react';
+import { client } from '../../sanity';
+
+interface Author {
+  name: string;
+}
+
+interface ContentBlock {
+  _type: string;
+  children: { text: string }[];
+}
+
+interface Post {
+  title: string;
+  content: ContentBlock[];
+  coverImage?: {
+    asset: { _ref: string };
+  };
+  date: string;
+  author?: Author;
+}
+
+export default function BlogPost({ params }: { params: { id: string } }) {
+  const [post, setPost] = useState<Post | null>(null);
 
   useEffect(() => {
-    if (id) {
-      const fetchPost = async () => {
-        const query = `*[_type == "post" && _id == $id][0]`;
-        const data = await client.fetch(query, { id });
-        setPost(data);
-      };
-      fetchPost();
+    async function fetchPost() {
+      const query = `
+        *[_type == "post" && slug.current == $slug][0]{
+          title,
+          content,
+          coverImage {
+            asset->{_ref}
+          },
+          date,
+          author->{
+            name
+          }
+        }
+      `;
+      const data = await client.fetch(query, { slug: params.id });
+      setPost(data);
     }
-  }, [id]);
+
+    fetchPost();
+  }, [params.id]);
 
   if (!post) return <div>Loading...</div>;
 
   return (
-    <div>
+    <article>
       <h1>{post.title}</h1>
-      <p>{post.excerpt}</p>
-      <div>{post.content}</div>
       {post.coverImage && (
-        <img src={post.coverImage.asset.url} alt={post.title} />
+        <img src={`/cdn/${post.coverImage.asset._ref}`} alt={post.title} />
       )}
-      {post.date && <p>{new Date(post.date).toLocaleDateString()}</p>}
-      {post.author && <p>Written by: {post.author.name}</p>}
-    </div>
+      <p>By {post.author?.name}</p>
+      <p>{new Date(post.date).toLocaleDateString()}</p>
+      {post.content.map((block, index) => (
+        <div key={index}>
+          {block.children.map((child, i) => (
+            <p key={i}>{child.text}</p>
+          ))}
+        </div>
+      ))}
+    </article>
   );
-};
-
-export default PostDetail;
+}
