@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { client } from '../sanity';
+import { client } from '../../sanity';
 import Link from 'next/link';
 
 interface Post {
@@ -29,7 +29,7 @@ const Blog = () => {
         {posts.map((post) => (
           <li key={post._id}>
             <h2>
-              <Link href={`/blog/${it-s-called-the-great-whirlwind}`}>
+              <Link href={`/blog/${post.slug.current}`}>
                 {post.title}
               </Link>
             </h2>
