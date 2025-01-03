@@ -14,6 +14,7 @@ const Blog = () => {
   }, []);
 
   return (
+<<<<<<< HEAD
     <div>
       <h1>Blog</h1>
       <ul>
@@ -33,3 +34,29 @@ const Blog = () => {
 };
 
 export default Blog;
+=======
+    <div className="min-h-screen p-6 pt-16">
+      <motion.h1
+        className="text-4xl md:text-6xl font-bold text-center my-8"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        Blog
+      </motion.h1>
+      <div className="max-w-3xl mx-auto">
+        {posts.map((post, index) => (
+          <motion.div
+            key={post.id}
+            className="mb-8"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: index * 0.2 }}
+          >
+            <Link href={`/blog/${post.id}`} className="block">
+className="block">
+href={`/blog/${post.id}`} className="block">
+className="block">
+<Link href={`/blog/${post.id}`} className="block">
+className="blo
+>>>>>>> cbd4c5b (update package)
