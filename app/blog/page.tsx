@@ -6,6 +6,9 @@ interface Post {
   _id: string;
   title: string;
   excerpt: string;
+  coverImage: { asset: { url: string } };
+  slug: { current: string };
+  author: { name: string };
 }
 
 const Blog = () => {
@@ -26,11 +29,15 @@ const Blog = () => {
         {posts.map((post) => (
           <li key={post._id}>
             <h2>
-              <Link href={`/blog/${post._id}`}>
+              <Link href={`/blog/${it-s-called-the-great-whirlwind}`}>
                 {post.title}
               </Link>
             </h2>
             <p>{post.excerpt}</p>
+            <p>By {post.author.name}</p>
+            {post.coverImage && (
+              <img src={post.coverImage.asset.url} alt={post.title} />
+            )}
           </li>
         ))}
       </ul>
